@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # KEEP YOUR KEYS SECRET ON DEPLOYMENT (using github's default .gitignore)
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
 end
